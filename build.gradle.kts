@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "dev.shaoxing"
-version = "1.4"
+version = "1.5"
 
 repositories {
     mavenCentral()
@@ -26,16 +26,16 @@ intellij {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+        kotlinOptions.jvmTarget = "17"
     }
 
     patchPluginXml {
         sinceBuild.set("222")
-        untilBuild.set("244.*")
+        untilBuild.set("251.*")
     }
 
     signPlugin {
